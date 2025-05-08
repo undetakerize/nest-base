@@ -1,13 +1,9 @@
 import { HttpException, Injectable } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './user.entity';
-import { FindOptionsWhere, ILike, Like, Repository } from 'typeorm';
-import { RegisterDto } from '../userLogon/dto/register-user.dto';
+import { FindOptionsWhere, ILike, Repository } from 'typeorm';
 import { PageService } from 'src/libs/utils/pagination/pagination-handler';
-import { GenericFilter } from 'src/libs/utils/pagination/dto/pagination-generic-filter.dto';
-import { PaginatedResult } from 'src/libs/utils/pagination/interfaces/pagination-interface';
 import { UserFilter } from 'src/service/user/dto/filter-user.dto';
 import { ResponseUserDto } from 'src/service/user/dto/response-user.dto';
 import { PageDto } from 'src/libs/utils/pagination/dto/page-dto-meta';
