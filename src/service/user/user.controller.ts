@@ -8,24 +8,17 @@ import {
   Delete,
 
   ParseUUIDPipe,
-  UsePipes,
-  ValidationPipe,
   UseGuards,
   Query,
   UseInterceptors,
   ClassSerializerInterceptor,
 } from '@nestjs/common';
 import { UserService } from '../../models/user/user.service';
-import { CreateUserDto } from '../../models/user/dto/create-user.dto';
 import { UpdateUserDto } from '../../models/user/dto/update-user.dto';
 import { IdParamUserDto } from 'src/models/user/dto/id-param-user.dto';
 import { JwtAuthGuard } from 'src/libs/config/auth/jwt-auth.guard';
-import { PaginationDto } from 'src/libs/utils/pagination/dto/pagination.dto';
-import { GenericFilter } from 'src/libs/utils/pagination/dto/pagination-generic-filter.dto';
 import { UserFilter } from './dto/filter-user.dto';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
-import { ApiPaginatedResponse } from 'src/libs/decorators/api-swagger-decorators';
-import { ResponseUserDto } from './dto/response-user.dto';
 
 @Controller('user')
 @ApiTags('user')
